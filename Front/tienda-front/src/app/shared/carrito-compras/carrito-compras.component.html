@@ -1,0 +1,16 @@
+
+<div style="padding-left: 8px;">
+    <p>Tiene {{articulos.length }} articulos en el carrito</p>
+    <ul>
+        <div class="card"  *ngFor="let data of articulos">
+            <li> <table> 
+                    <tr>{{data.nombre}}</tr> 
+                    <tr> <button type="button" class="btn btn-danger" > <i class="bi bi-trash-fill"></i></button></tr>
+                </table>
+            </li>
+        </div>
+    </ul>
+ 
+    <button type="button" class="btn btn-primary" (click)="procederCompra()" [disabled]="articulos.length==0"> Proceder a la compra</button>
+</div>
+

@@ -1,0 +1,93 @@
+<div class="row">
+   <div class="card">
+    <div class="card-body">
+      <h4 class="card-title">Resultados</h4>
+    
+      <div class="table-responsive m-t-40">
+        <div id="example23_wrapper" class="dataTables_wrapper">
+          <div id="example23_filter" class="dataTables_filter">
+          </div>
+          <table
+            id="example23"
+            class="display nowrap table table-hover table-striped table-bordered dataTable"
+            cellspacing="0"
+            width="100%"
+            role="grid"
+            aria-describedby="example23_info"
+            style="width: 100%"
+          >
+            <thead>
+              <tr role="row">
+                <th
+                  class="sorting_asc"
+                  tabindex="0"
+                  aria-controls="example23"
+                  rowspan="1"
+                  colspan="1"
+                  aria-sort="ascending"
+                  aria-label="Name: activate to sort column descending"
+                  style="width: 243px"
+                >
+                  Código
+                </th>
+                <th
+                  class="sorting"
+                  tabindex="0"
+                  aria-controls="example23"
+                  rowspan="1"
+                  colspan="1"
+                  aria-label="Position: activate to sort column ascending"
+                  style="width: 356px"
+                >
+                  Nombre
+                </th>
+                <th
+                  class="sorting"
+                  tabindex="0"
+                  aria-controls="example23"
+                  rowspan="1"
+                  colspan="1"
+                  aria-label="Office: activate to sort column ascending"
+                  style="width: 181px"
+                >
+                  Descripción
+                </th>
+                <th
+                  class="sorting"
+                  tabindex="0"
+                  aria-controls="example23"
+                  rowspan="1"
+                  colspan="1"
+                  aria-label="Age: activate to sort column ascending"
+                  style="width: 92px"
+                >
+                  Precio
+                </th>
+                <th
+                  class="sorting"
+                  tabindex="0"
+                  aria-controls="example23"
+                  rowspan="1"
+                  colspan="1"
+                  aria-label="Start date: activate to sort column ascending"
+                  style="width: 166px"
+                >
+                  Stock
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let data of articulosConsulta" role="row" class="odd">
+                <td>{{ data.codigo }}</td>
+                <td>{{ data.nombre }}</td>
+                <td>{{ data.descripcion }}</td>
+                <td>$ {{ data.precio }}</td>
+                <td>{{ data.stock }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+

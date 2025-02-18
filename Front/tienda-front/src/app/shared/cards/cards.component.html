@@ -1,0 +1,15 @@
+<div class="card"  *ngFor="let data of articulo">
+  <!-- <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp" class="card-img-top" alt="Hollywood Sign on The Hill"/> -->
+  <img [src]="obtenerImagen(data.imagen)" width="300" height="500" class="card-img-top" alt="Hollywood Sign on The Hill"/>
+  <div class="card-body">
+    <h5 class="card-title">Código: {{data.codigo}} </h5>
+    <h5 class="card-title">{{data.nombre}} </h5>
+    <p class="card-text">
+      {{data.descripcion}}
+    </p>
+    <p class="card-text">
+      <small class="text-muted">$ {{data.precio}}</small>
+    </p>
+    <button type="button" class="btn btn-primary" (click)="agregarCarrito(data)"> Agregar al carrito</button>
+  </div>
+</div>

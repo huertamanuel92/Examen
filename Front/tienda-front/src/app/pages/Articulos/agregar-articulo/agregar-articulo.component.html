@@ -1,0 +1,70 @@
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Agregar articulos </h4>
+                <div class="collapse" id="collapseExample" aria-expanded="false">
+                    <div class="card card-body">
+  
+                    </div>
+                </div>
+                <form [formGroup]='articuloFromGroup' (ngSubmit)="agregarArticulo()">
+                  <div class="form-group m-t-20 row">
+                      <label for="example-text-input" class="col-2 col-form-label">Código</label>
+                      <div class="col-5">
+                          <input class="form-control" type="text"  id="example-text-input" formControlName="codigo">
+                      </div>
+                  </div>
+                    <div class="form-group m-t-20 row">
+                        <label for="example-text-input" class="col-2 col-form-label">Nombre artículo</label>
+                        <div class="col-5">
+                            <input class="form-control" type="text"  id="example-text-input" formControlName="nombre">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="example-search-input" class="col-2 col-form-label">Descripción</label>
+                        <div class="col-5">
+                            <input class="form-control" type="text"  id="example-search-input"  formControlName="descripcion">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="example-email-input" class="col-2 col-form-label">Precio</label>
+                        <div class="col-5">
+                            <input class="form-control" type="number"  id="example-email-input"  formControlName="precio">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="example-email-input" class="col-2 col-form-label">Stock</label>
+                        <div class="col-5">
+                            <input class="form-control" type="number"  id="example-email-input"  formControlName="stock">
+                        </div>
+                    </div> 
+                    <div class="form-group row">
+                        <label for="example-email-input" class="col-2 col-form-label">Stock</label>
+                        <div class="col-5">
+                            <app-image-upload 
+                                (onSelectedFile)="onSelectedProduct($event)"
+                                (voted)="onVoted($event)"></app-image-upload>    
+                        </div>
+                    </div> 
+                   
+                    <div class="form-group row">
+                        <label for="example-email-input" class="col-2 col-form-label">Stock</label>
+                        <div class="col-5">
+                            <select (change)="getSelectedValue($event)"
+                                [(ngModel)]="select" class="form-control"> 
+                                <option *ngFor="let option of typesOfShoes" [value]="option.id">
+                                    {{ option.sucursal }}
+                                  </option>
+                              </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Guardar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+
+ 
